@@ -22,8 +22,11 @@ def getArgs():
     return {'link' : args['link'], 'movies' : args['movies'], 'numMoviesToSee' : args['numMoviesToSee']}
 
 def printMovies(movies):
-    for movie in movies:
-        movie.print()
-        print('\n-----------------------')
+    for name, screenings in movies.items():
+        print(name + '\n')
+        for screening in screenings:
+            screening.print()
+        print('\n------------------------')
+
 
 main()

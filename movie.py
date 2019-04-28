@@ -1,11 +1,9 @@
 class Movie:
-    def __init__(self, name, runTime, screenFormatStartTimesDict):
+    def __init__(self, name, runTime, screenFormat, startTime):
         self.name = name
         self.runTime = runTime
-        self.screenFormatStartTimesDict = screenFormatStartTimesDict
+        self.screenFormat = screenFormat
+        self.startTime = startTime
 
     def print(self):
-        print(self.name + ': ' + self.runTime)
-        for screenFormat, screenFormatStartTimesDict in self.screenFormatStartTimesDict.items():
-            for startTime in screenFormatStartTimesDict:
-                print(screenFormat + ' -- ' + startTime)
+        print(self.name + ': ' + self.runTime + ' @ ' + self.startTime + ' in ' + self.screenFormat)
